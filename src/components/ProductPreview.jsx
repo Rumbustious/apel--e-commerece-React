@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import rawData from "../assets/Data.json";
 
-export default function AddtoCart({ addToCart }) {
+export default function ProductPreview({ addToCart }) {
   const { id } = useParams();
   const productData = rawData[0];
 

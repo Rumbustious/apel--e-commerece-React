@@ -16,14 +16,14 @@ export default function Cart({ cart, resetCart }) {
 
   const checkoutHandler = () => {
     resetCart();
-  }
+  };
   return (
     <>
-      <h1>Cart</h1>
       {cart.length === 0 ? (
         <h1 className="err-msg">Cart is empty</h1>
       ) : (
         <div>
+          <h1>Cart</h1>
           <div className="flex center">
             <div className="product--container">{products}</div>
           </div>

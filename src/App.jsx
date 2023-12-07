@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
-import AddtoCart from "./components/AddToCart";
+import AddtoCart from "./components/ProductPreview";
 import Cart from "./components/Cart";
 export default function App() {
   const [cart, setCart] = useState([]);
