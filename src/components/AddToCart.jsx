@@ -29,7 +29,7 @@ export default function AddtoCart({ addToCart }) {
           voluptatibus consequatur rem autem ab eaque rerum exercitationem
           expedita fugiat, numquam tenetur temporibus.
         </p>
-        <button className="add-to-cart--btn" onClick={addToCartHandler}>
+        <button className="btn" onClick={addToCartHandler}>
           Add to Cart
         </button>
       </div>

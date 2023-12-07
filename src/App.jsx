@@ -11,13 +11,16 @@ export default function App() {
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
   };
-  console.log(cart);
+  const resetCart = () => setCart([]);
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Cart" element={<Cart cart={cart} />} />
+        <Route
+          path="/Cart"
+          element={<Cart cart={cart} resetCart={resetCart} />}
+        />
         <Route path="Product" element={<AddtoCart addToCart={addToCart} />}>
           <Route
             path="/Product/:id"

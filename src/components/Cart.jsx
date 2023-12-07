@@ -1,5 +1,5 @@
 import Product from "./Product";
-export default function Cart({ cart }) {
+export default function Cart({ cart, resetCart }) {
   let price = 0;
   const products = cart.map((product) => {
     price += product.price;
@@ -13,11 +13,15 @@ export default function Cart({ cart }) {
       />
     );
   });
+
+  const checkoutHandler = () => {
+    resetCart();
+  }
   return (
     <>
       <h1>Cart</h1>
       {cart.length === 0 ? (
-        <p className="flex center">Cart is empty</p>
+        <h1 className="err-msg">Cart is empty</h1>
       ) : (
         <div>
           <div className="flex center">
@@ -25,11 +29,17 @@ export default function Cart({ cart }) {
           </div>
           <h3>Summary</h3>
           <div className="summary-container">
-            <p>total items</p>
-            <p>{cart.length}</p>
-            <p>total cost</p>
-            <p>$ {price}</p>
-            <button className="add-to-cart--btn">Checkout</button>
+            <div className="flex space-between">
+              <p>total items</p>
+              <p>{cart.length}</p>
+            </div>
+            <div className="flex space-between">
+              <p>total cost</p>
+              <p>$ {price}</p>
+            </div>
+            <button className="btn" onClick={checkoutHandler}>
+              Checkout
+            </button>
           </div>
         </div>
       )}

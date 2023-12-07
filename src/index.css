@@ -1,3 +1,15 @@
+
+body {
+  font-family: sans-serif;
+  color: rgb(15, 23, 41);
+}
+.nav--container {
+  background-color: rgb(242, 245, 250);
+}
+.logo {
+  font-size: x-large;
+  font-weight: bold;
+}
 .product--container {
   width: 80rem;
   display: flex;
@@ -18,8 +30,12 @@
 .flex {
   display: flex;
 }
+.flex-col {
+  flex-direction: column;
+}
 .center {
   justify-content: center;
+  justify-items: center;
 }
 .space-between {
   justify-content: space-between;
@@ -36,8 +52,8 @@ ul {
   text-decoration: none;
   color: black;
 }
-.mr-in-2rem {
-  margin-inline: 2rem;
+.pd-2rem {
+  padding-inline: 2rem;
 }
 .align-center {
   align-items: center;
@@ -54,19 +70,37 @@ ul {
 }
 .full-width {
   width: 100%;
-  /* position: relative; */
 }
 
-.add-to-cart--btn {
+.btn {
   width: 100%;
-  background-color: blueviolet;
+  background-color: rgb(15, 23, 41);
   color: white;
-  /* position: absolute; */
-  /* margin-top: 10rem; */
+  font-family: sans-serif;
+  font-size: medium;
   height: 2.5rem;
   bottom: 4rem;
 }
-.add-to-cart--btn:hover {
-    cursor: pointer;
-    background-color: purple;
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(15, 23, 41, 0.9);
+}
+.summary-container {
+  border: 2px white solid;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+.err-msg {
+  text-align: center;
+}
+.go-home--btn {
+  padding: 1rem;
+  font-size: medium;
+  text-align: center;
+}
+.go-home--btn > * {
+  text-decoration: none;
+  color: rgb(15, 23, 41)
+
 }
