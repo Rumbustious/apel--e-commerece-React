@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Product(props) {
-  console.log(props.id);
   return (
     <Link to={`/Product/${props.id}`} className="product">
       <img src={props.image} width={230} height={150} alt="" />
