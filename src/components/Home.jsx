@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Product from "./Product";
-import rawData from "../Data.json";
+import rawData from "../assets/Data.json";
 export default function Home() {
   const productData = rawData[0];
   console.log(productData);

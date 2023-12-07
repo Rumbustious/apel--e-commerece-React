@@ -1,5 +1,5 @@
 import { Navigate, useParams } from "react-router-dom";
-import rawData from "../Data.json";
+import rawData from "../assets/Data.json";
 
 export default function AddtoCart() {
   const { id } = useParams();
